@@ -1,0 +1,53 @@
+INSERT INTO users
+("id", "name", "email", "password", "phone", "address", "created_at", "updated_at")
+VALUES
+(
+    gen_random_uuid(),
+    'Budi',
+    'budi@gmail.com',
+    ?,
+    '08123456789',
+    'Medan',
+    NOW(),
+    NOW()
+),
+(
+    gen_random_uuid(),
+    'Andi',
+    'andi@gmail.com',
+    ?,
+    '08123452189',
+    'Medan',
+    NOW(),
+    NOW()
+),
+(
+    gen_random_uuid(),
+    'Sri',
+    'sri@gmail.com',
+    ?,
+    '08233452189',
+    'Medan',
+    NOW(),
+    NOW()
+),
+(
+    gen_random_uuid(),
+    'Rian',
+    'rian@gmail.com',
+    ?,
+    '08234662189',
+    'Medan',
+    NOW(),
+    NOW()
+),
+(
+    gen_random_uuid(),
+    'Citra',
+    'citra@gmail.com',
+    ?,
+    '082693293189',
+    'Medan',
+    NOW(),
+    NOW()
+);
