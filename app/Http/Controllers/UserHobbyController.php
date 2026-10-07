@@ -16,15 +16,17 @@ class UserHobbyController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
-    {
-        $users = UserHobby::with('user','hobby')->get();
+   public function index()
+{
+    $users = UserHobby::with('user', 'hobby')
+        ->orderBy('updated_at', 'asc')
+        ->get();
 
-        return response()->json([
-            'success' => true,
-            'data' => $users
-        ]);
-    }
+    return response()->json([
+        'success' => true,
+        'data' => $users
+    ]);
+}
 
     /**
      * Show the form for creating a new resource.

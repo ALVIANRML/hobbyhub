@@ -1,0 +1,531 @@
+.hobby-table-card {
+                width: 100%;
+                max-width: none;
+                box-sizing: border-box;
+ 
+                background: #ffffff;
+                border: 1px solid #e9ecef;
+                border-radius: 16px;
+                overflow: hidden;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+            }
+ 
+            .hobby-table-header {
+                padding: 20px 24px;
+                border-bottom: 1px solid #edf0f2;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 20px;
+            }
+ 
+            .hobby-title h5 {
+                margin: 0;
+                font-weight: 700;
+                color: #212529;
+            }
+ 
+            .hobby-title p {
+                margin: 4px 0 0;
+                color: #8a94a6;
+                font-size: 13px;
+            }
+ 
+            .hobby-table {
+                width: 100%;
+                min-width: 600px;
+                margin: 0;
+            }
+ 
+            .hobby-table thead th {
+                background: #f8faf9;
+                color: #7b8494;
+                font-size: 12px;
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: .4px;
+                padding: 15px 20px;
+                border: none;
+            }
+ 
+            .hobby-table tbody td {
+                padding: 17px 20px;
+                border-color: #f0f1f3;
+                color: #343a40;
+                font-size: 14px;
+                vertical-align: middle;
+            }
+ 
+            .hobby-table tbody tr {
+                transition: .2s ease;
+            }
+ 
+            .hobby-table tbody tr:hover {
+                background: #f8fbf9;
+            }
+ 
+            .hobby-number {
+                color: #9aa2ad;
+                font-weight: 500;
+                width: 60px;
+            }
+ 
+            .hobby-info {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+            }
+ 
+            .hobby-name {
+                font-weight: 600;
+                color: #212529;
+            }
+ 
+            .hobby-description {
+                color: #8a94a6;
+                font-size: 13px;
+                max-width: 400px;
+                line-height: 1.5;
+            }
+ 
+            .user-count {
+                display: inline-flex;
+                align-items: center;
+                gap: 6px;
+                background: #f1f7f3;
+                color: #198754;
+                padding: 6px 10px;
+                border-radius: 20px;
+                font-size: 12px;
+                font-weight: 600;
+            }
+ 
+            .hobby-action-buttons {
+                display: flex;
+                gap: 6px;
+                justify-content: flex-end;
+            }
+ 
+            .hobby-btn {
+                border-radius: 8px;
+                font-size: 12px;
+                padding: 6px 10px;
+                font-weight: 600;
+            }
+ 
+            .hobby-btn-edit {
+                background: #fff8e6;
+                color: #d89b00;
+                border: 1px solid #ffe7a8;
+            }
+ 
+            .hobby-btn-edit:hover {
+                background: #ffefc2;
+                color: #b67d00;
+            }
+ 
+            .hobby-btn-delete {
+                background: #fff0f0;
+                color: #dc3545;
+                border: 1px solid #ffd6d6;
+            }
+ 
+            .hobby-btn-delete:hover {
+                background: #ffe0e0;
+                color: #bb2d3b;
+            }
+ 
+            .no-result {
+                display: none;
+                text-align: center;
+                padding: 35px !important;
+                color: #9aa2ad;
+            }
+ 
+            @media (max-width: 768px) {
+ 
+                .hobby-table-header {
+                    flex-direction: column;
+                    align-items: stretch;
+                }
+ 
+                .hobby-search {
+                    width: 100%;
+                }
+ 
+            }
+ 
+            .hobby-header-actions {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                gap: 10px;
+                flex-shrink: 0;
+            }
+ 
+            .hobby-search {
+                position: relative;
+                width: 250px;
+                height: 40px;
+            }
+ 
+            .hobby-search input {
+                width: 100%;
+                height: 40px;
+                box-sizing: border-box;
+ 
+                border: 1px solid #e1e5e9;
+                border-radius: 10px;
+ 
+                padding: 0 14px 0 40px;
+ 
+                font-size: 13px;
+                color: #343a40;
+ 
+                outline: none;
+                transition: all .2s ease;
+            }
+ 
+            .hobby-search input::placeholder {
+                color: #a0a7b2;
+            }
+ 
+            .hobby-search input:focus {
+                border-color: #198754;
+                box-shadow: 0 0 0 3px rgba(25, 135, 84, .08);
+            }
+ 
+            .hobby-search-icon {
+                position: absolute;
+                left: 14px;
+                top: 50%;
+ 
+                transform: translateY(-50%);
+ 
+                color: #9aa2ad;
+                font-size: 14px;
+ 
+                pointer-events: none;
+            }
+ 
+            .btn-add-user {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                gap: 8px;
+ 
+                height: 40px;
+                padding: 0 16px;
+ 
+                border: none;
+                border-radius: 10px;
+ 
+                background: #198754;
+                color: #ffffff;
+ 
+                font-size: 13px;
+                font-weight: 600;
+ 
+                white-space: nowrap;
+                cursor: pointer;
+ 
+                box-shadow: 0 4px 10px rgba(25, 135, 84, 0.18);
+ 
+                transition: all .2s ease;
+            }
+ 
+            .btn-add-user:hover {
+                background: #157347;
+                color: #ffffff;
+ 
+                transform: translateY(-1px);
+ 
+                box-shadow: 0 6px 14px rgba(25, 135, 84, 0.25);
+            }
+ 
+            .btn-add-user:active {
+                transform: translateY(0);
+            }
+ 
+            .btn-add-icon {
+                width: 20px;
+                height: 20px;
+ 
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+ 
+                border-radius: 6px;
+ 
+                background: rgba(255, 255, 255, 0.18);
+ 
+                font-size: 17px;
+                line-height: 1;
+            }
+ 
+            .page-content {
+                width: 100%;
+                max-width: none;
+                padding: 0;
+            }
+ 
+            .hobby-pagination {
+                padding: 16px 24px;
+                border-top: 1px solid #edf0f2;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 16px;
+                flex-wrap: wrap;
+            }
+ 
+            .hobby-pagination-info {
+                color: #8a94a6;
+                font-size: 13px;
+            }
+ 
+            .hobby-pagination-controls {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                flex-wrap: wrap;
+            }
+ 
+            .hobby-per-page {
+                height: 36px;
+                border: 1px solid #e1e5e9;
+                border-radius: 8px;
+                padding: 0 10px;
+                font-size: 13px;
+                color: #343a40;
+                outline: none;
+                background: #fff;
+            }
+ 
+            .hobby-per-page:focus {
+                border-color: #198754;
+            }
+ 
+            .hobby-page-buttons {
+                display: flex;
+                gap: 6px;
+            }
+ 
+            .hobby-page-btn {
+                min-width: 36px;
+                height: 36px;
+                padding: 0 10px;
+                border: 1px solid #e1e5e9;
+                border-radius: 8px;
+                background: #fff;
+                color: #495057;
+                font-size: 13px;
+                font-weight: 600;
+                cursor: pointer;
+                transition: all .2s ease;
+            }
+ 
+            .hobby-page-btn:hover:not(:disabled):not(.active) {
+                background: #f1f7f3;
+                border-color: #198754;
+                color: #198754;
+            }
+ 
+            .hobby-page-btn.active {
+                background: #198754;
+                border-color: #198754;
+                color: #fff;
+            }
+ 
+            .hobby-page-btn:disabled {
+                opacity: .45;
+                cursor: not-allowed;
+            }
+ 
+            .hobby-page-dots {
+                display: inline-flex;
+                align-items: center;
+                padding: 0 4px;
+                color: #9aa2ad;
+            }
+            .hobby-modal-backdrop {
+                position: fixed;
+                inset: 0;
+                background: rgba(33, 37, 41, .45);
+                display: none;
+                align-items: center;
+                justify-content: center;
+                padding: 16px;
+                z-index: 2000;
+                overflow-y: auto;
+            }
+ 
+            .hobby-modal {
+                width: 100%;
+                max-width: 480px;
+                max-height: calc(100vh - 32px);
+                background: #fff;
+                border-radius: 16px;
+                box-shadow: 0 20px 60px rgba(0, 0, 0, .2);
+                overflow: hidden;
+            }
+ 
+            .hobby-modal form {
+                display: flex;
+                flex-direction: column;
+                max-height: calc(100vh - 32px);
+            }
+ 
+            .hobby-modal-header {
+                padding: 20px 24px;
+                border-bottom: 1px solid #edf0f2;
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                gap: 12px;
+            }
+ 
+            .hobby-modal-header h5 {
+                margin: 0;
+                font-weight: 700;
+                color: #212529;
+            }
+ 
+            .hobby-modal-header p {
+                margin: 4px 0 0;
+                color: #8a94a6;
+                font-size: 13px;
+            }
+ 
+            .hobby-modal-close {
+                border: none;
+                background: transparent;
+                color: #9aa2ad;
+                font-size: 26px;
+                line-height: 1;
+                cursor: pointer;
+                padding: 0 4px;
+            }
+ 
+            .hobby-modal-close:hover {
+                color: #495057;
+            }
+ 
+            .hobby-modal-body {
+                padding: 20px 24px;
+                overflow-y: auto;
+            }
+ 
+            .hobby-modal-footer {
+                padding: 16px 24px;
+                border-top: 1px solid #edf0f2;
+                display: flex;
+                justify-content: flex-end;
+                gap: 10px;
+            }
+ 
+            .hobby-form-group {
+                margin-bottom: 16px;
+                text-align: left;
+            }
+ 
+            .hobby-form-group:last-child {
+                margin-bottom: 0;
+            }
+ 
+            .hobby-form-label {
+                display: block;
+                margin-bottom: 6px;
+                font-size: 13px;
+                font-weight: 600;
+                color: #495057;
+            }
+ 
+            .hobby-form-group input[type="text"],
+            .hobby-form-group textarea {
+                width: 100%;
+                padding: 0 14px;
+                border: 1px solid #e1e5e9;
+                border-radius: 10px;
+                font-size: 14px;
+                font-family: inherit;
+                color: #343a40;
+                outline: none;
+                transition: all .2s ease;
+                box-sizing: border-box;
+            }
+ 
+            .hobby-form-group input[type="text"] {
+                height: 42px;
+            }
+ 
+            .hobby-form-group textarea {
+                min-height: 100px;
+                padding: 10px 14px;
+                resize: vertical;
+            }
+ 
+            .hobby-form-group input:focus,
+            .hobby-form-group textarea:focus {
+                border-color: #198754;
+                box-shadow: 0 0 0 3px rgba(25, 135, 84, .08);
+            }
+ 
+            .hobby-field-error {
+                margin-top: 5px;
+                font-size: 12px;
+                color: #dc3545;
+            }
+ 
+            .hobby-field-error:empty {
+                display: none;
+            }
+ 
+            .hobby-form-alert {
+                display: none;
+                margin-bottom: 16px;
+                padding: 10px 14px;
+                border-radius: 10px;
+                background: #fff0f0;
+                border: 1px solid #ffd6d6;
+                color: #bb2d3b;
+                font-size: 13px;
+                text-align: left;
+            }
+ 
+            .hobby-modal-cancel,
+            .hobby-modal-save {
+                height: 40px;
+                padding: 0 18px;
+                border-radius: 10px;
+                font-size: 13px;
+                font-weight: 600;
+                cursor: pointer;
+                transition: all .2s ease;
+            }
+ 
+            .hobby-modal-cancel {
+                background: #fff;
+                color: #495057;
+                border: 1px solid #e1e5e9;
+            }
+ 
+            .hobby-modal-cancel:hover {
+                background: #f8f9fa;
+            }
+ 
+            .hobby-modal-save {
+                background: #198754;
+                color: #fff;
+                border: none;
+                box-shadow: 0 4px 10px rgba(25, 135, 84, 0.18);
+            }
+ 
+            .hobby-modal-save:hover:not(:disabled) {
+                background: #157347;
+            }
+ 
+            .hobby-modal-save:disabled {
+                opacity: .65;
+                cursor: not-allowed;
+            }

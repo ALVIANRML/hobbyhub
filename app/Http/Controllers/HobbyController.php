@@ -12,15 +12,15 @@ class HobbyController extends Controller
      * Display a listing of the resource.
      */
     public function index()
-    {
-      $hobbies = Hobby::all();
+{
+    $hobbies = Hobby::orderBy('updated_at', 'asc')->get();
 
-        return response()->json([
-            'success' => true,
-            'message' => 'Data ditemukan',
-            'data' => $hobbies,
-        ]);
-    }
+    return response()->json([
+        'success' => true,
+        'message' => 'Data ditemukan',
+        'data' => $hobbies,
+    ]);
+}
 
     /**
      * Show the form for creating a new resource.

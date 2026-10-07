@@ -17,7 +17,7 @@ Route:: middleware('auth:api')->group(function(){
     Route::delete('user-hobby/delete-user/{id}', [UserHobbyController::class, 'destroy']);
     Route::get('hobby/get-all', [HobbyController::class, 'index']);
     Route::post('hobby/add-hobby', [HobbyController::class, 'store']);
-    Route::put('hobby/update-hobby/{id}', [HobbyController::class, 'update']);
-    Route::delete('hobby/delete-hobby/{id}', [HobbyController::class, 'destroy']);
+        Route::put('hobby/update-hobby/{id}', [HobbyController::class, 'update']);
+        Route::delete('hobby/delete-hobby/{id}', [HobbyController::class, 'destroy']);
 
 });
