@@ -36,7 +36,8 @@ class HobbyController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'nama' => 'required|string|max:255'
+            'nama' => 'required|string|max:255',
+            'deskripsi' => 'required|string'
         ]);
 
         DB::beginTransaction();
@@ -44,6 +45,7 @@ class HobbyController extends Controller
         try{
             $hobby = Hobby::create([
                 'nama' => $validated['nama'],
+                'deskripsi' => $validated['deskripsi'],
             ]);
 
             DB::commit();
@@ -94,13 +96,14 @@ class HobbyController extends Controller
 
     $validated = $request->validate([
         'nama' => 'required|string|max:255',
+        'deskripsi' => 'required|string',
     ]);
 
     DB::beginTransaction();
 
     try {
         // Update data
-        $hobby->nama = $validated['nama'];
+        $hobby->deskripsi = $validated['deskripsi'];
 
         // Simpan perubahan ke database
         $hobby->save();
@@ -155,7 +158,7 @@ class HobbyController extends Controller
 
             return response()->json([
                 'success' => false,
-                'message' => 'Dat gagal dihapus',
+                'message' => 'Data gagal dihapus',
             ], 500);
         }
     }

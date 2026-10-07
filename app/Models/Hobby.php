@@ -10,6 +10,7 @@ class Hobby extends Model
 
     protected $fillable = [
         'nama',
+        'deskripsi',
     ];
 
     public function userHobbies() {
