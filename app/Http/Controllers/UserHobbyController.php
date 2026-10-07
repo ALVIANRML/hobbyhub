@@ -19,7 +19,7 @@ class UserHobbyController extends Controller
    public function index()
 {
     $users = UserHobby::with('user', 'hobby')
-        ->orderBy('updated_at', 'asc')
+        ->orderBy('updated_at', 'desc')
         ->get();
 
     return response()->json([

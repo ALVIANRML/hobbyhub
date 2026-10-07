@@ -11,9 +11,9 @@ class HobbyController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+  public function index()
 {
-    $hobbies = Hobby::orderBy('updated_at', 'asc')->get();
+    $hobbies = Hobby::orderBy('updated_at', 'desc')->get();
 
     return response()->json([
         'success' => true,
